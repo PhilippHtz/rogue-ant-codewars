@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/Inter/Inter-VariableFont_slnt_wght.ttf');
+  font-weight: 100 900;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--fg-dark);
+}
+
+body {
+  background-color: #1c1c1f;
+}
