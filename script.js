@@ -83,4 +83,96 @@ const parseInt = str => {
 };
 
 const str = 'seven hundred eighty-three thousand nine hundred and nineteen';
-console.log(parseInt(str));
+
+//i https://www.codewars.com/kata/514b92a657cdc65150000006
+const findMultiples = number => {
+  const multiples = [];
+  let sum = 0;
+
+  if (number < 0) return 0;
+
+  for (let i = 1; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      multiples.push(i);
+    }
+  }
+
+  for (let i = 0; i < multiples.length; i++) {
+    sum = sum + multiples[i];
+  }
+
+  return sum;
+};
+
+//i https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d
+const checkStringEnd = (str, ending) => {
+  return (
+    str
+      .split('')
+      .splice(str.length - ending.length, ending.length)
+      .join('') === ending
+  );
+};
+
+//i https://www.codewars.com/kata/5648b12ce68d9daa6b000099
+const peopleOnBus = busStops => {
+  let numberOfPeople = 0;
+  busStops.forEach(busStop => {
+    numberOfPeople = numberOfPeople + busStop[0] - busStop[1];
+  });
+
+  return numberOfPeople;
+};
+
+//i https://www.codewars.com/kata/525f50e3b73515a6db000b83
+const createPhoneNumber = numbers => {
+  return (
+    '(' +
+    numbers[0] +
+    numbers[1] +
+    numbers[2] +
+    ')' +
+    ' ' +
+    numbers[3] +
+    numbers[4] +
+    numbers[5] +
+    '-' +
+    numbers[6] +
+    numbers[7] +
+    numbers[8] +
+    numbers[9]
+  );
+};
+
+const orderWords = str => {
+  const words = str.split(' ');
+  const sortedWords = [];
+
+  for (let i = 1; i <= words.length; i++) {
+    sortedWords.push(words.find(word => word.includes(i)));
+  }
+
+  return sortedWords.join(' ');
+};
+
+//i https://www.codewars.com/kata/514a024011ea4fb54200004b
+const domainName = url => {
+  url = url.replace('https://', '');
+  url = url.replace('http://', '');
+  url = url.replace('www.', '');
+
+  return url.split('.')[0];
+};
+
+//i https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+const splitStrings = str => {
+  if (str.length % 2 !== 0) {
+    str = str.concat('_');
+  }
+
+  str.match();
+
+  console.log(str);
+};
+
+splitStrings('abc');
